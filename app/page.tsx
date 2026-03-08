@@ -1,12 +1,6 @@
 import { ArrowDown } from "lucide-react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import { AboutSection } from "@/components/about-section";
+import { WorkSection } from "@/components/work-section";
 import { BlogSection } from "@/components/blog-section";
 
 export default function Page() {
@@ -46,62 +40,12 @@ export default function Page() {
             </div>
           </div>
 
-          {/* Carousel Section */}
-          <div className="flex flex-col gap-8 mt-4 md:mt-12">
-            <h3 className="text-xl font-medium tracking-tight pr-6 md:pr-8 lg:pr-10">Get the recent work.</h3>
-
-            <Carousel
-              opts={{
-                align: "start",
-                dragFree: true,
-              }}
-              className="w-full"
-            >
-              <CarouselContent className="-ml-6 md:-ml-8">
-                {/* Item 1 */}
-                <CarouselItem className="pl-6 md:pl-8 md:basis-[90%] lg:basis-[85%] xl:basis-[80%]">
-                  <div className="flex flex-col gap-6 bg-muted/40 rounded-[2.5rem] p-10 md:p-12 h-[600px]">
-
-                    {/* Image Placeholder */}
-                    <div className="flex-1 w-full bg-muted/60 rounded-3xl mt-6 flex items-center justify-center relative overflow-hidden">
-                      <div className="w-full h-full absolute inset-0 bg-[#e5e5e5] dark:bg-gray-800"></div>
-                    </div>
-                    <p className="text-muted-foreground text-lg leading-relaxed max-w-sm">
-                      Now with a 50% louder speaker and up to a 1.5x greater Something it's easter than ever to keep track of what matters.
-                    </p>
-                  </div>
-                </CarouselItem>
-
-                {/* Item 2 */}
-                <CarouselItem className="pl-6 md:pl-8 md:basis-[90%] lg:basis-[85%] xl:basis-[80%]">
-                  <div className="flex flex-col gap-6 bg-muted/40 rounded-[2.5rem] p-10 md:p-12 h-[600px]">
-                    {/* Image Placeholder */}
-                    <div className="flex-1 w-full bg-muted/60 rounded-3xl mt-6 flex items-center justify-center relative overflow-hidden">
-                      <div className="w-full h-full absolute inset-0 bg-[#e5e5e5] dark:bg-gray-800"></div>
-                    </div>
-                    <p className="text-muted-foreground text-lg leading-relaxed">
-                      Text
-                    </p>
-                  </div>
-                </CarouselItem>
-                {/* Item 3 */}
-                <CarouselItem className="pl-6 md:pl-8 md:basis-[90%] lg:basis-[85%] xl:basis-[80%]">
-                  <div className="flex flex-col gap-6 bg-muted/40 rounded-[2.5rem] p-10 md:p-12 h-[600px]">
-                    {/* Image Placeholder */}
-                    <div className="flex-1 w-full bg-muted/60 rounded-3xl mt-6 flex items-center justify-center relative overflow-hidden">
-                      <div className="w-full h-full absolute inset-0 bg-[#e5e5e5] dark:bg-gray-800"></div>
-                    </div>
-                    <p className="text-muted-foreground text-lg leading-relaxed">
-                      Text
-                    </p>
-                  </div>
-                </CarouselItem>
-
-              </CarouselContent>
-            </Carousel>
-          </div>
-
         </div>
+      </div>
+
+      {/* Work Section */}
+      <div className="w-full mt-16 md:mt-24 border-t border-border pt-4">
+        <WorkSection />
       </div>
 
       {/* About Section */}
