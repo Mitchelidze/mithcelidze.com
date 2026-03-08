@@ -12,16 +12,16 @@ export function HeaderNavigation() {
         <div className="flex flex-col gap-8 md:gap-4 pr-6 md:pr-4 lg:pr-4">
           {/* Navigation */}
           <nav className="flex items-center gap-6 text-muted-foreground text-sm md:text-sm">
-            <a href="#" className="hover:text-foreground transition-colors">
+            <a href="#work" className="hover:text-foreground transition-colors">
               Work
             </a>
-            <a href="#" className="hover:text-foreground transition-colors">
+            <a href="#about" className="hover:text-foreground transition-colors">
               About
             </a>
-            <a href="#" className="hover:text-foreground transition-colors">
+            <a href="#blog" className="hover:text-foreground transition-colors">
               Blog
             </a>
-            <a href="#" className="hover:text-foreground transition-colors">
+            <a href="#resume" className="hover:text-foreground transition-colors">
               Resume
             </a>
             <ContactButton />

@@ -6,7 +6,7 @@ import { HeaderNavigation } from "@/components/header-navigation";
 
 export default function Page() {
   return (
-    <div className="min-h-svh w-full p-4 md:p-4 lg:p-4 overflow-x-clip">
+    <div id="work" className="min-h-svh w-full p-4 md:p-4 lg:p-4 overflow-x-clip">
       {/* Header Navigation */}
       <HeaderNavigation />
 
@@ -21,7 +21,7 @@ export default function Page() {
       </div>
 
       {/* About Section */}
-      <div className="w-full mt-16 md:mt-24 border-t border-border pt-4">
+      <div id="about" className="w-full mt-16 md:mt-24 border-t border-border pt-4">
         <AboutSection />
       </div>
 
@@ -47,10 +47,12 @@ export default function Page() {
       </div>
 
       {/* Blog Section */}
-      <BlogSection />
+      <div id="blog">
+        <BlogSection />
+      </div>
 
       {/* Elsewhere & Footer */}
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-8 lg:gap-10 w-full mt-16 md:mt-24 border-t border-border pt-4">
+      <div id="resume" className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-8 lg:gap-10 w-full mt-16 md:mt-24 border-t border-border pt-4">
         <div className="md:col-span-4 lg:col-span-5 pr-6 md:pr-8 lg:pr-10 flex flex-col justify-between">
           <h2 className="text-base font-medium text-foreground">
             Elsewhere.
