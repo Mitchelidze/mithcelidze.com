@@ -126,9 +126,9 @@ export function HeaderNavigation() {
           </DropdownMenuContent>
         </DropdownMenu>
 
-        <span className="text-foreground text-xl font-medium tracking-tight">
+        <a href="/" className="text-foreground text-xl font-bold tracking-tight cursor-pointer drop-shadow-sm hover:opacity-80 transition-opacity">
           Miranda T.
-        </span>
+        </a>
       </div>
 
       {/* ── Desktop bar ────────────────────────────────────────── */}

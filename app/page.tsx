@@ -34,7 +34,16 @@ export default function Page() {
         </div>
         <div className="md:col-span-8 lg:col-span-7 pr-6 md:pr-8 lg:pr-10">
           <div className="flex flex-wrap gap-2 md:gap-3">
-            {Array(6).fill("Product Design").map((text, i) => (
+            {[
+              "Product Design",
+              "Interaction Design",
+              "Visual Design",
+              "UX Research",
+              "Design Systems",
+              "GenAI",
+              "Code Prototypes",
+              "Crucial Conversations"
+            ].map((text, i) => (
               <div
                 key={i}
                 className="px-4 py-2 md:px-5 md:py-2.5 rounded-full border border-foreground/30 text-foreground text-[15px] font-medium transition-colors hover:bg-muted/50 cursor-default"
@@ -63,9 +72,12 @@ export default function Page() {
         </div>
         <div className="md:col-span-8 lg:col-span-7 pr-6 md:pr-8 lg:pr-10 flex flex-col">
           <div className="flex gap-6 md:gap-8">
-            {["Linkedin", "Youtube", "Medium"].map((link) => (
-              <a key={link} href="#" className="font-medium text-foreground/80 hover:text-foreground text-[15px] transition-colors">
-                {link}
+            {[
+              { name: "Linkedin", url: "https://www.linkedin.com/in/mitchelidze/" },
+              { name: "Youtube", url: "https://www.youtube.com/@mirandatchelidze/videos" }
+            ].map((link) => (
+              <a key={link.name} href={link.url} target="_blank" rel="noopener noreferrer" className="font-medium text-foreground/80 hover:text-foreground text-[15px] transition-colors">
+                {link.name}
               </a>
             ))}
           </div>
