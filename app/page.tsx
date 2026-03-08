@@ -1,5 +1,6 @@
 import { ArrowDown } from "lucide-react";
 import { AboutSection } from "@/components/about-section";
+import { HeroSection } from "@/components/hero-section";
 import { WorkSection } from "@/components/work-section";
 import { BlogSection } from "@/components/blog-section";
 
@@ -11,9 +12,7 @@ export default function Page() {
 
         {/* Left Sidebar */}
         <div className="md:col-span-4 lg:col-span-5 pr-6 md:pr-8 lg:pr-10">
-          <h1 className="text-xl md:text-2xl font-medium tracking-tight">
-            Miranda T.
-          </h1>
+
         </div>
 
         {/* Right Content */}
@@ -28,23 +27,18 @@ export default function Page() {
               <a href="#" className="hover:text-foreground transition-colors">Blog</a>
               <a href="#" className="hover:text-foreground transition-colors">Resume</a>
             </nav>
-
-            {/* Hero Copy */}
-            <div className="max-w-3xl flex flex-col gap-8">
-              <h2 className="text-2xl md:text-4xl lg:text-2xl font-medium leading-[1.2] tracking-tight text-foreground/90">
-                Senior product designer with interface design training for working designers. A proven framework that helps you articulate design decisions, execute your taste, and finish work to the level it deserves.
-              </h2>
-              <ArrowDown className="w-8 h-8" strokeWidth={1.5} />
-
-
-            </div>
           </div>
 
         </div>
       </div>
 
+      {/* Hero Section */}
+      <div className="w-full mt-0.5 md:mt-0.5 pt-4">
+        <HeroSection />
+      </div>
+
       {/* Work Section */}
-      <div className="w-full mt-16 md:mt-24 border-t border-border pt-4">
+      <div className="w-full mt-48 md:mt-64 border-t border-border pt-4">
         <WorkSection />
       </div>
 

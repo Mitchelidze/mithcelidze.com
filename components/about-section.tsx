@@ -5,6 +5,7 @@ import { MinusIcon, PlusIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ButtonGroup } from "@/components/ui/button-group";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Avatar, AvatarImage, AvatarFallback, AvatarBadge } from "@/components/ui/avatar";
 
 export function AboutSection() {
 
@@ -13,21 +14,25 @@ export function AboutSection() {
       {/* Left Column (Image & Heading) */}
       <div className="md:col-span-4 lg:col-span-5 flex flex-col gap-6 pr-6 md:pr-8 lg:pr-10">
         <h2 className="text-base font-medium text-foreground">
-          Get to know Miranda.
+          Get to know me.
         </h2>
-        {/* Profile Image */}
-        <div className="w-full aspect-[3/4.2] bg-[#e5e5e5] dark:bg-zinc-800 rounded-sm overflow-hidden">
-          <img
-            src="https://i.ibb.co/3mKHGgqp/1713454994829.jpg"
-            alt="Miranda"
-            className="w-full h-full object-cover"
-          />
-        </div>
+
       </div>
 
       {/* Right Column (Tabs & Content) */}
+
       <Tabs defaultValue="Prose" className="md:col-span-8 lg:col-span-7 flex flex-col gap-8 pr-6 md:pr-8 lg:pr-10">
         {/* Top Controls Row */}
+        <div className="relative w-1/2">
+          <Avatar className="w-32 h-32">
+            <AvatarImage
+              src="https://media.licdn.com/dms/image/v2/D4D35AQEgjazBf4RcGg/profile-framedphoto-shrink_400_400/B4DZzHryEsHwAc-/0/1772876669519?e=1773601200&v=beta&t=C2jwfUProcvpZ4FC3VLLnyGAi7hTrsmlANxlZeMKkQU"
+              alt="Miranda"
+              className="w-full h-full object-cover"
+            />
+            <AvatarFallback className="w-full h-full rounded-none text-2xl">M</AvatarFallback>
+          </Avatar>
+        </div>
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
           {/* Tabs */}
           <TabsList>
@@ -55,7 +60,7 @@ export function AboutSection() {
         </div>
 
         {/* Content Area */}
-        <div className="text-base md:text-[17px] text-foreground/90 leading-relaxed max-w-3xl">
+        <div className="text-[16px] text-foreground/90 leading-relaxed max-w-3xl">
           <TabsContent value="List" className="mt-0">
             <ul className="list-disc flex flex-col gap-2 pl-4 marker:text-foreground">
               <li>
