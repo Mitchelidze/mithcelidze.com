@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect } from "react";
-import { X } from "lucide-react";
+import { X, Link } from "lucide-react";
+import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 import type { BlogPost } from "@/lib/blog-posts";
 
@@ -64,8 +65,29 @@ export function BlogModal({ post, onClose }: BlogModalProps) {
           <div className="w-10 h-1 rounded-full bg-foreground/20" />
         </div>
 
-        {/* Close button */}
-        <div className="flex items-center justify-end px-5 pt-2 pb-4 shrink-0">
+        {/* Header actions */}
+        <div className="flex items-center justify-end gap-2 px-5 pt-2 pb-4 shrink-0">
+          {/* Copy link button */}
+          {post && (
+            <button
+              onClick={() => {
+                const url = `${window.location.origin}${window.location.pathname}?post=${post.slug}`;
+                navigator.clipboard.writeText(url).then(() => {
+                  toast.success("Link copied");
+                });
+              }}
+              aria-label="Copy link"
+              className={cn(
+                "w-8 h-8 rounded-full flex items-center justify-center",
+                "bg-muted hover:bg-muted/80 text-foreground/70 hover:text-foreground",
+                "transition-colors duration-200"
+              )}
+            >
+              <Link className="w-4 h-4" strokeWidth={2} />
+            </button>
+          )}
+
+          {/* Close button */}
           <button
             onClick={onClose}
             aria-label="Close"
