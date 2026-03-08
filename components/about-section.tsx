@@ -1,69 +1,62 @@
 "use client";
 
-import { useState } from "react";
 import { cn } from "@/lib/utils";
-import { Plus, Minus } from "lucide-react";
+import { MinusIcon, PlusIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ButtonGroup } from "@/components/ui/button-group";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export function AboutSection() {
-  const [activeTab, setActiveTab] = useState<"List" | "Prose" | "Timeline">("List");
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 lg:gap-20 w-full">
       {/* Left Column (Image & Heading) */}
-      <div className="md:col-span-4 lg:col-span-5 flex flex-col gap-6 border-b md:border-b-0 pb-6 md:pb-0 pr-6 md:pr-12 lg:pr-20">
+      <div className="md:col-span-4 lg:col-span-5 flex flex-col gap-6 pr-6 md:pr-12 lg:pr-20">
         <h2 className="text-base font-medium text-foreground">
           Get to know Miranda.
         </h2>
         {/* Profile Image */}
         <div className="w-full aspect-[3/4.2] bg-[#e5e5e5] dark:bg-zinc-800 rounded-sm overflow-hidden">
-          <img 
-            src="https://i.ibb.co/3mKHGgqp/1713454994829.jpg" 
-            alt="Miranda" 
+          <img
+            src="https://i.ibb.co/3mKHGgqp/1713454994829.jpg"
+            alt="Miranda"
             className="w-full h-full object-cover"
           />
         </div>
       </div>
 
       {/* Right Column (Tabs & Content) */}
-      <div className="md:col-span-8 lg:col-span-7 flex flex-col gap-8 pr-6 md:pr-12 lg:pr-20">
+      <Tabs defaultValue="Prose" className="md:col-span-8 lg:col-span-7 flex flex-col gap-8 pr-6 md:pr-12 lg:pr-20">
         {/* Top Controls Row */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
           {/* Tabs */}
-          <div className="flex items-center gap-6 md:gap-8">
-            {(["List", "Prose", "Timeline"] as const).map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={cn(
-                  "text-lg transition-colors hover:text-foreground",
-                  activeTab === tab 
-                    ? "text-foreground font-semibold" 
-                    : "text-muted-foreground font-medium"
-                )}
-              >
-                {tab}
-              </button>
-            ))}
-          </div>
+          <TabsList>
+            <TabsTrigger value="Prose" className="text-base">Prose</TabsTrigger>
+            <TabsTrigger value="List" className="text-base">List</TabsTrigger>
+            <TabsTrigger value="Timeline" className="text-base">Timeline</TabsTrigger>
+          </TabsList>
 
           {/* Length Controls */}
-          <div className="flex items-center gap-4 text-muted-foreground mr-1">
-             <span className="text-lg text-foreground font-medium">Length</span>
-             <div className="flex items-center gap-0">
-                <Button variant="ghost" size="icon" className="h-8 w-8 hover:bg-muted/50 rounded-full text-foreground/80">
-                  <Minus strokeWidth={1.5} className="h-5 w-5" />
-                </Button>
-                <Button variant="ghost" size="icon" className="h-8 w-8 hover:bg-muted/50 rounded-full text-foreground/80">
-                  <Plus strokeWidth={1.5} className="h-5 w-5" />
-                </Button>
-             </div>
-          </div>
+          {/* <div className="flex items-center gap-4 text-muted-foreground mr-1">
+            <span className="text-lg text-foreground font-medium">Length</span>
+            <ButtonGroup
+              orientation="horizontal"
+              aria-label="Length controls"
+              className="h-fit"
+            >
+              <Button variant="outline" size="icon" className="h-8 w-8 text-foreground/80">
+                <MinusIcon strokeWidth={1.5} className="h-4 w-4" />
+              </Button>
+              <Button variant="outline" size="icon" className="h-8 w-8 text-foreground/80">
+                <PlusIcon strokeWidth={1.5} className="h-4 w-4" />
+              </Button>
+            </ButtonGroup>
+          </div> */}
         </div>
 
         {/* Content Area */}
         <div className="text-base md:text-[17px] text-foreground/90 leading-relaxed max-w-3xl">
-          {activeTab === "List" && (
+          <TabsContent value="List" className="mt-0">
             <ul className="list-disc flex flex-col gap-2 pl-4 marker:text-foreground">
               <li>
                 Began career in product design in 2019 in agencies and media companies, building a foundation in storytelling, usability, and collaboration.
@@ -87,9 +80,9 @@ export function AboutSection() {
                 Today, fractional design leader partnering with early-stage startups like Daylight Computer, Workmate, Slingshot AI, and Google Ventures.
               </li>
             </ul>
-          )}
+          </TabsContent>
 
-          {activeTab === "Prose" && (
+          <TabsContent value="Prose" className="mt-0">
             <div className="flex flex-col gap-4 md:gap-5">
               <p>
                 Miranda began her career in product design in 2019 in agencies and media companies, building a foundation in storytelling, usability, and collaboration. As a founding designer at Automatic ('11—'13), she shaped strategy, product, and brand design for its award-winning smart driving assistant.
@@ -101,46 +94,46 @@ export function AboutSection() {
                 After serving as Head of Design at Canopy, launching personalization products, she transitioned to CNN as Director of Design and Research. At Patreon ('21—'23), she reimagined the app's architecture and launched Patreon Communities. Today, she is a fractional design leader partnering with early-stage startups.
               </p>
             </div>
-          )}
+          </TabsContent>
 
-          {activeTab === "Timeline" && (
-             <div className="flex flex-col gap-4 md:gap-5">
-                <div className="grid grid-cols-[80px_1fr] gap-6">
-                  <div className="text-muted-foreground font-medium">Present</div>
-                  <div>Fractional Design Leader for early-stage startups.</div>
-                </div>
-                <div className="grid grid-cols-[80px_1fr] gap-6">
-                  <div className="text-muted-foreground font-medium">'21—'23</div>
-                  <div>Patreon, reimagined architecture and launched Communities.</div>
-                </div>
-                <div className="grid grid-cols-[80px_1fr] gap-6">
-                  <div className="text-muted-foreground font-medium">'20—'21</div>
-                  <div>CNN, Director of Design and Research for Emerging Products.</div>
-                </div>
-                <div className="grid grid-cols-[80px_1fr] gap-6">
-                  <div className="text-muted-foreground font-medium">'19—'20</div>
-                  <div>Canopy, Head of Design, launched personalization products.</div>
-                </div>
-                <div className="grid grid-cols-[80px_1fr] gap-6">
-                  <div className="text-muted-foreground font-medium">'17—'19</div>
-                  <div>Google, worked on VR tools (Daydream) and Jigsaw products.</div>
-                </div>
-                <div className="grid grid-cols-[80px_1fr] gap-6">
-                  <div className="text-muted-foreground font-medium">'13—'17</div>
-                  <div>Meta, led design for VR products and Facebook Stories.</div>
-                </div>
-                <div className="grid grid-cols-[80px_1fr] gap-6">
-                  <div className="text-muted-foreground font-medium">'11—'13</div>
-                  <div>Automatic, Founding Designer.</div>
-                </div>
-                <div className="grid grid-cols-[80px_1fr] gap-6">
-                  <div className="text-muted-foreground font-medium">2019</div>
-                  <div>Began career in agencies and media companies.</div>
-                </div>
-             </div>
-          )}
+          <TabsContent value="Timeline" className="mt-0">
+            <div className="flex flex-col gap-4 md:gap-5">
+              <div className="grid grid-cols-[80px_1fr] gap-6">
+                <div className="text-muted-foreground font-medium">Present</div>
+                <div>Fractional Design Leader for early-stage startups.</div>
+              </div>
+              <div className="grid grid-cols-[80px_1fr] gap-6">
+                <div className="text-muted-foreground font-medium">'21—'23</div>
+                <div>Patreon, reimagined architecture and launched Communities.</div>
+              </div>
+              <div className="grid grid-cols-[80px_1fr] gap-6">
+                <div className="text-muted-foreground font-medium">'20—'21</div>
+                <div>CNN, Director of Design and Research for Emerging Products.</div>
+              </div>
+              <div className="grid grid-cols-[80px_1fr] gap-6">
+                <div className="text-muted-foreground font-medium">'19—'20</div>
+                <div>Canopy, Head of Design, launched personalization products.</div>
+              </div>
+              <div className="grid grid-cols-[80px_1fr] gap-6">
+                <div className="text-muted-foreground font-medium">'17—'19</div>
+                <div>Google, worked on VR tools (Daydream) and Jigsaw products.</div>
+              </div>
+              <div className="grid grid-cols-[80px_1fr] gap-6">
+                <div className="text-muted-foreground font-medium">'13—'17</div>
+                <div>Meta, led design for VR products and Facebook Stories.</div>
+              </div>
+              <div className="grid grid-cols-[80px_1fr] gap-6">
+                <div className="text-muted-foreground font-medium">'11—'13</div>
+                <div>Automatic, Founding Designer.</div>
+              </div>
+              <div className="grid grid-cols-[80px_1fr] gap-6">
+                <div className="text-muted-foreground font-medium">2019</div>
+                <div>Began career in agencies and media companies.</div>
+              </div>
+            </div>
+          </TabsContent>
         </div>
-      </div>
+      </Tabs>
     </div>
   );
 }

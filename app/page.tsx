@@ -15,7 +15,7 @@ export default function Page() {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 lg:gap-20 w-full">
 
         {/* Left Sidebar */}
-        <div className="md:col-span-4 lg:col-span-5 border-b md:border-b-0 pb-6 md:pb-0 pr-6 md:pr-12 lg:pr-20">
+        <div className="md:col-span-4 lg:col-span-5 pr-6 md:pr-12 lg:pr-20">
           <h1 className="text-xl md:text-2xl font-medium tracking-tight">
             Miranda T.
           </h1>
@@ -38,13 +38,9 @@ export default function Page() {
               <h2 className="text-2xl md:text-4xl lg:text-2xl font-medium leading-[1.2] tracking-tight text-foreground/90">
                 Senior product designer with interface design training for working designers. A proven framework that helps you articulate design decisions, execute your taste, and finish work to the level it deserves.
               </h2>
+              <ArrowDown className="w-8 h-8" strokeWidth={1.5} />
 
-              <div className="flex flex-col gap-6 mt-4">
-                <p className="text-xl md:text-xl font-medium tracking-tight">
-                  I&apos;m currently open to conversations.
-                </p>
-                <ArrowDown className="w-8 h-8" strokeWidth={1.5} />
-              </div>
+
             </div>
           </div>
 
@@ -72,16 +68,6 @@ export default function Page() {
                     {/* Image Placeholder */}
                     <div className="flex-1 w-full bg-muted/60 rounded-3xl mt-6 flex items-center justify-center relative overflow-hidden">
                       <div className="w-full h-full absolute inset-0 bg-[#e5e5e5] dark:bg-gray-800"></div>
-                      {/* Mock Phone Container for specific visual */}
-                      <div className="absolute bottom-0 w-3/4 max-w-[280px] h-[80%] bg-white rounded-t-3xl border-8 border-b-0 border-gray-900 overflow-hidden shadow-2xl flex flex-col blur-[0.5px]">
-                        <div className="w-full h-8 bg-white flex justify-center items-center">
-                          <div className="w-16 h-4 bg-gray-900 rounded-full"></div>
-                        </div>
-                        <div className="flex-1 bg-gray-100 flex flex-col p-4 gap-4">
-                          <div className="w-full h-32 bg-linear-to-br from-orange-400 to-pink-500 rounded-xl"></div>
-                          <div className="w-full h-32 bg-linear-to-br from-blue-400 to-indigo-500 rounded-xl"></div>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </CarouselItem>
@@ -132,7 +118,7 @@ export default function Page() {
 
       {/* Capabilities Section */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 lg:gap-20 w-full mt-16 md:mt-24 border-t border-border pt-4">
-        <div className="md:col-span-4 lg:col-span-5 border-b md:border-b-0 pb-6 md:pb-0 pr-6 md:pr-12 lg:pr-20">
+        <div className="md:col-span-4 lg:col-span-5 pr-6 md:pr-12 lg:pr-20">
           <h2 className="text-base font-medium text-foreground">
             Capabilities.
           </h2>
@@ -153,7 +139,7 @@ export default function Page() {
 
       {/* Elsewhere & Footer */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 lg:gap-20 w-full mt-16 md:mt-24 mb-12 border-t border-border pt-4">
-        <div className="md:col-span-4 lg:col-span-5 border-b md:border-b-0 pb-6 md:pb-0 pr-6 md:pr-12 lg:pr-20 flex flex-col justify-between">
+        <div className="md:col-span-4 lg:col-span-5 pr-6 md:pr-12 lg:pr-20 flex flex-col justify-between">
           <h2 className="text-base font-medium text-foreground">
             Elsewhere.
           </h2>
