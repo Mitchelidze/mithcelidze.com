@@ -1,8 +1,8 @@
-import { ArrowDown } from "lucide-react";
 import { AboutSection } from "@/components/about-section";
 import { HeroSection } from "@/components/hero-section";
 import { WorkSection } from "@/components/work-section";
 import { BlogSection } from "@/components/blog-section";
+import { ContactButton } from "@/components/contact-toast";
 
 export default function Page() {
   return (
@@ -26,6 +26,7 @@ export default function Page() {
               <a href="#" className="hover:text-foreground transition-colors">About</a>
               <a href="#" className="hover:text-foreground transition-colors">Blog</a>
               <a href="#" className="hover:text-foreground transition-colors">Resume</a>
+              <ContactButton />
             </nav>
           </div>
 
