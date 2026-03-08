@@ -26,7 +26,7 @@ export function AboutSection() {
         <div className="relative w-1/2">
           <Avatar className="w-32 h-32">
             <AvatarImage
-              src="https://media.licdn.com/dms/image/v2/D4D35AQEgjazBf4RcGg/profile-framedphoto-shrink_400_400/B4DZzHryEsHwAc-/0/1772876669519?e=1773601200&v=beta&t=C2jwfUProcvpZ4FC3VLLnyGAi7hTrsmlANxlZeMKkQU"
+              src="https://i.ibb.co/fGNzsRMz/mirandaimage.jpg"
               alt="Miranda"
               className="w-full h-full object-cover"
             />
@@ -40,23 +40,6 @@ export function AboutSection() {
             <TabsTrigger value="List" className="text-base">List</TabsTrigger>
             <TabsTrigger value="Timeline" className="text-base">Timeline</TabsTrigger>
           </TabsList>
-
-          {/* Length Controls */}
-          {/* <div className="flex items-center gap-4 text-muted-foreground mr-1">
-            <span className="text-lg text-foreground font-medium">Length</span>
-            <ButtonGroup
-              orientation="horizontal"
-              aria-label="Length controls"
-              className="h-fit"
-            >
-              <Button variant="outline" size="icon" className="h-8 w-8 text-foreground/80">
-                <MinusIcon strokeWidth={1.5} className="h-4 w-4" />
-              </Button>
-              <Button variant="outline" size="icon" className="h-8 w-8 text-foreground/80">
-                <PlusIcon strokeWidth={1.5} className="h-4 w-4" />
-              </Button>
-            </ButtonGroup>
-          </div> */}
         </div>
 
         {/* Content Area */}
