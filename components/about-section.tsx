@@ -9,9 +9,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export function AboutSection() {
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 lg:gap-20 w-full">
+    <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-8 lg:gap-10 w-full">
       {/* Left Column (Image & Heading) */}
-      <div className="md:col-span-4 lg:col-span-5 flex flex-col gap-6 pr-6 md:pr-12 lg:pr-20">
+      <div className="md:col-span-4 lg:col-span-5 flex flex-col gap-6 pr-6 md:pr-8 lg:pr-10">
         <h2 className="text-base font-medium text-foreground">
           Get to know Miranda.
         </h2>
@@ -26,7 +26,7 @@ export function AboutSection() {
       </div>
 
       {/* Right Column (Tabs & Content) */}
-      <Tabs defaultValue="Prose" className="md:col-span-8 lg:col-span-7 flex flex-col gap-8 pr-6 md:pr-12 lg:pr-20">
+      <Tabs defaultValue="Prose" className="md:col-span-8 lg:col-span-7 flex flex-col gap-8 pr-6 md:pr-8 lg:pr-10">
         {/* Top Controls Row */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
           {/* Tabs */}
