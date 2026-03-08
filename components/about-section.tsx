@@ -9,9 +9,9 @@ export function AboutSection() {
   const [activeTab, setActiveTab] = useState<"List" | "Prose" | "Timeline">("List");
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-12 lg:gap-20 w-full">
+    <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 lg:gap-20 w-full">
       {/* Left Column (Image & Heading) */}
-      <div className="md:col-span-1 flex flex-col gap-6">
+      <div className="md:col-span-4 lg:col-span-5 flex flex-col gap-6 border-b md:border-b-0 pb-6 md:pb-0 pr-6 md:pr-12 lg:pr-20">
         <h2 className="text-base font-medium text-foreground">
           Get to know Miranda.
         </h2>
@@ -26,7 +26,7 @@ export function AboutSection() {
       </div>
 
       {/* Right Column (Tabs & Content) */}
-      <div className="md:col-span-2 lg:col-span-3 flex flex-col gap-8 pr-6 md:pr-12 lg:pr-20">
+      <div className="md:col-span-8 lg:col-span-7 flex flex-col gap-8 pr-6 md:pr-12 lg:pr-20">
         {/* Top Controls Row */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
           {/* Tabs */}
