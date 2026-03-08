@@ -11,7 +11,7 @@ export function HeroSection() {
     <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-8 lg:gap-10 w-full">
       {/* Left Column */}
       <div className="md:col-span-4 lg:col-span-5 flex flex-col gap-6 pr-6 md:pr-8 lg:pr-10">
-        <h1 className="text-xl md:text-2xl font-medium tracking-tight">
+        <h1 className="hidden md:block text-xl md:text-2xl font-medium tracking-tight">
           Miranda T.
         </h1>
       </div>

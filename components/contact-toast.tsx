@@ -7,50 +7,31 @@ import { cn } from "@/lib/utils";
 
 const EMAIL = "mitchelidze@gmail.com";
 
-export function ContactButton() {
+// ─── Shared hook ────────────────────────────────────────────────────────────
+export function useContactToast() {
   const [visible, setVisible] = useState(false);
   const [copied, setCopied] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const timerRef = { current: null as ReturnType<typeof setTimeout> | null };
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  const handleClick = (e: React.MouseEvent) => {
-    e.preventDefault();
+  const trigger = () => {
     navigator.clipboard.writeText(EMAIL);
     setCopied(true);
     setVisible(true);
-
-    if (timerRef.current) clearTimeout(timerRef.current);
-    timerRef.current = setTimeout(() => {
+    setTimeout(() => {
       setVisible(false);
       setTimeout(() => setCopied(false), 300);
     }, 3000);
   };
 
-  useEffect(() => {
-    return () => {
-      if (timerRef.current) clearTimeout(timerRef.current);
-    };
-  }, []);
-
-  return (
-    <>
-      <a
-        href="#"
-        onClick={handleClick}
-        className="hover:text-foreground transition-colors"
-      >
-        Contact
-      </a>
-
-      {/* Toast */}
-      {mounted && createPortal(
+  const ToastPortal = mounted
+    ? createPortal(
         <div
           className={cn(
-            "fixed bottom-6 right-6 z-50 flex items-center gap-3 px-4 py-3 rounded-xl",
+            "fixed bottom-6 right-6 z-200 flex items-center gap-3 px-4 py-3 rounded-xl",
             "bg-background border border-border shadow-lg shadow-black/10",
             "text-sm text-foreground backdrop-blur-sm",
             "transition-all duration-300 ease-out",
@@ -74,7 +55,29 @@ export function ContactButton() {
           </div>
         </div>,
         document.body
-      )}
+      )
+    : null;
+
+  return { trigger, ToastPortal };
+}
+
+// ─── Standalone button (used in desktop nav) ────────────────────────────────
+export function ContactButton() {
+  const { trigger, ToastPortal } = useContactToast();
+
+  return (
+    <>
+      <a
+        href="#"
+        onClick={(e) => {
+          e.preventDefault();
+          trigger();
+        }}
+        className="text-muted-foreground hover:text-foreground transition-colors"
+      >
+        Contact
+      </a>
+      {ToastPortal}
     </>
   );
 }

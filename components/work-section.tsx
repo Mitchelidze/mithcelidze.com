@@ -28,21 +28,21 @@ export function WorkSection() {
           <CarouselContent className="-ml-6 md:-ml-8">
             {/* Item 1 */}
             <CarouselItem className="pl-6 md:pl-8 md:basis-[90%] lg:basis-[85%] xl:basis-[80%]">
-              <div className="flex flex-col gap-6 bg-muted/40 rounded-[2.5rem] p-10 md:p-12 h-[600px]">
+              <div className="flex flex-col gap-6 bg-gray-200 dark:bg-zinc-900 rounded-[2.5rem] p-10 md:p-12 h-[600px]">
 
               </div>
             </CarouselItem>
 
             {/* Item 2 */}
             <CarouselItem className="pl-6 md:pl-8 md:basis-[90%] lg:basis-[85%] xl:basis-[80%]">
-              <div className="flex flex-col gap-6 bg-muted/40 rounded-[2.5rem] p-10 md:p-12 h-[600px]">
+              <div className="flex flex-col gap-6 bg-gray-200 dark:bg-zinc-900 rounded-[2.5rem] p-10 md:p-12 h-[600px]">
 
               </div>
             </CarouselItem>
 
             {/* Item 3 */}
             <CarouselItem className="pl-6 md:pl-8 md:basis-[90%] lg:basis-[85%] xl:basis-[80%]">
-              <div className="flex flex-col gap-6 bg-muted/40 rounded-[2.5rem] p-10 md:p-12 h-[600px]">
+              <div className="flex flex-col gap-6 bg-gray-200 dark:bg-zinc-900 rounded-[2.5rem] p-10 md:p-12 h-[600px]">
 
               </div>
             </CarouselItem>
