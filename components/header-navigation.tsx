@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 import { Menu, ExternalLink, Copy } from "lucide-react";
 import { ContactButton, useContactToast } from "@/components/contact-toast";
 import {
@@ -72,7 +73,7 @@ export function HeaderNavigation() {
   };
 
   return (
-    <div className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-md">
+    <div className="sticky top-0 z-50 w-[calc(100%+2rem)] bg-background/80 backdrop-blur-md -mx-4 px-4">
       {/* ── Mobile bar ─────────────────────────────────────────── */}
       <div className="flex md:hidden items-center gap-3 py-2">
         <DropdownMenu open={open} onOpenChange={setOpen} modal={false}>
@@ -126,9 +127,9 @@ export function HeaderNavigation() {
           </DropdownMenuContent>
         </DropdownMenu>
 
-        <a href="/" className="text-foreground text-xl font-bold tracking-tight cursor-pointer drop-shadow-sm hover:opacity-80 transition-opacity">
+        <Link href="/" className="text-foreground text-xl font-bold tracking-tight cursor-pointer drop-shadow-sm hover:opacity-80 transition-opacity">
           Miranda T.
-        </a>
+        </Link>
       </div>
 
       {/* ── Desktop bar ────────────────────────────────────────── */}

@@ -1,22 +1,17 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { blogPosts } from "@/lib/blog-posts";
 import type { BlogPost } from "@/lib/blog-posts";
 import { BlogModal } from "@/components/blog-modal";
 
 export function BlogSection() {
-  const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
-
-  // On mount, open the post whose slug matches the ?post= query param
-  useEffect(() => {
+  const [selectedPost, setSelectedPost] = useState<BlogPost | null>(() => {
+    if (typeof window === "undefined") return null;
     const params = new URLSearchParams(window.location.search);
     const slug = params.get("post");
-    if (slug) {
-      const post = blogPosts.find((p) => p.slug === slug);
-      if (post) setSelectedPost(post);
-    }
-  }, []);
+    return slug ? (blogPosts.find((p) => p.slug === slug) ?? null) : null;
+  });
 
   const openPost = (post: BlogPost) => {
     setSelectedPost(post);

@@ -1,11 +1,7 @@
 "use client";
 
-import { cn } from "@/lib/utils";
-import { MinusIcon, PlusIcon } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { ButtonGroup } from "@/components/ui/button-group";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Avatar, AvatarImage, AvatarFallback, AvatarBadge } from "@/components/ui/avatar";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 export function AboutSection() {
 
@@ -50,19 +46,19 @@ export function AboutSection() {
                 Began career in product design in 2019 in agencies and media companies, building a foundation in storytelling, usability, and collaboration.
               </li>
               <li>
-                Founding designer at Automatic ('11—'13), shaping strategy, product, and brand design for its award-winning smart driving assistant.
+                Founding designer at Automatic (&lsquo;11&mdash;&rsquo;13), shaping strategy, product, and brand design for its award-winning smart driving assistant.
               </li>
               <li>
-                At Meta ('13—'17), led design for storytelling and VR products including Facebook Stories, 360, and Spaces; created the Facebook VR Guidelines and mentored teams transitioning from 2D to 3D.
+                At Meta (&lsquo;13&mdash;&rsquo;17), led design for storytelling and VR products including Facebook Stories, 360, and Spaces; created the Facebook VR Guidelines and mentored teams transitioning from 2D to 3D.
               </li>
               <li>
-                At Google ('17—'19), worked on VR tools with Daydream and later at Jigsaw, building products like Shield for journalists and Trainer for law enforcement to address disinformation and online safety.
+                At Google (&lsquo;17&mdash;&rsquo;19), worked on VR tools with Daydream and later at Jigsaw, building products like Shield for journalists and Trainer for law enforcement to address disinformation and online safety.
               </li>
               <li>
-                Head of Design at Canopy ('19—'20), launching personalization products; transitioned to CNN ('20—'21) after its acquisition as Director of Design and Research for Emerging Products and Platforms.
+                Head of Design at Canopy (&lsquo;19&mdash;&rsquo;20), launching personalization products; transitioned to CNN (&lsquo;20&mdash;&rsquo;21) after its acquisition as Director of Design and Research for Emerging Products and Platforms.
               </li>
               <li>
-                At Patreon ('21—'23), reimagined the app's architecture, scaled the design system, and launched Patreon Communities to connect creators with their most dedicated fans.
+                At Patreon (&lsquo;21&mdash;&rsquo;23), reimagined the app&rsquo;s architecture, scaled the design system, and launched Patreon Communities to connect creators with their most dedicated fans.
               </li>
               <li>
                 Today, fractional design leader partnering with early-stage startups like Daylight Computer, Workmate, Slingshot AI, and Google Ventures.
@@ -73,13 +69,13 @@ export function AboutSection() {
           <TabsContent value="Prose" className="mt-0">
             <div className="flex flex-col gap-4 md:gap-5">
               <p>
-                Miranda began her career in product design in 2019 in agencies and media companies, building a foundation in storytelling, usability, and collaboration. As a founding designer at Automatic ('11—'13), she shaped strategy, product, and brand design for its award-winning smart driving assistant.
+                Miranda began her career in product design in 2019 in agencies and media companies, building a foundation in storytelling, usability, and collaboration. As a founding designer at Automatic (&lsquo;11&mdash;&rsquo;13), she shaped strategy, product, and brand design for its award-winning smart driving assistant.
               </p>
               <p>
-                At Meta ('13—'17), she led design for storytelling and VR products including Facebook Stories, 360, and Spaces. She created the Facebook VR Guidelines and mentored teams transitioning from 2D to 3D. Later, at Google ('17—'19), she worked on VR tools with Daydream and at Jigsaw, building products like Shield for journalists to address disinformation.
+                At Meta (&lsquo;13&mdash;&rsquo;17), she led design for storytelling and VR products including Facebook Stories, 360, and Spaces. She created the Facebook VR Guidelines and mentored teams transitioning from 2D to 3D. Later, at Google (&lsquo;17&mdash;&rsquo;19), she worked on VR tools with Daydream and at Jigsaw, building products like Shield for journalists to address disinformation.
               </p>
               <p>
-                After serving as Head of Design at Canopy, launching personalization products, she transitioned to CNN as Director of Design and Research. At Patreon ('21—'23), she reimagined the app's architecture and launched Patreon Communities. Today, she is a fractional design leader partnering with early-stage startups.
+                After serving as Head of Design at Canopy, launching personalization products, she transitioned to CNN as Director of Design and Research. At Patreon (&lsquo;21&mdash;&rsquo;23), she reimagined the app&rsquo;s architecture and launched Patreon Communities. Today, she is a fractional design leader partnering with early-stage startups.
               </p>
             </div>
           </TabsContent>
@@ -91,27 +87,27 @@ export function AboutSection() {
                 <div>Fractional Design Leader for early-stage startups.</div>
               </div>
               <div className="grid grid-cols-[80px_1fr] gap-6">
-                <div className="text-muted-foreground font-medium">'21—'23</div>
+                <div className="text-muted-foreground font-medium">&lsquo;21&mdash;&rsquo;23</div>
                 <div>Patreon, reimagined architecture and launched Communities.</div>
               </div>
               <div className="grid grid-cols-[80px_1fr] gap-6">
-                <div className="text-muted-foreground font-medium">'20—'21</div>
+                <div className="text-muted-foreground font-medium">&lsquo;20&mdash;&rsquo;21</div>
                 <div>CNN, Director of Design and Research for Emerging Products.</div>
               </div>
               <div className="grid grid-cols-[80px_1fr] gap-6">
-                <div className="text-muted-foreground font-medium">'19—'20</div>
+                <div className="text-muted-foreground font-medium">&lsquo;19&mdash;&rsquo;20</div>
                 <div>Canopy, Head of Design, launched personalization products.</div>
               </div>
               <div className="grid grid-cols-[80px_1fr] gap-6">
-                <div className="text-muted-foreground font-medium">'17—'19</div>
+                <div className="text-muted-foreground font-medium">&lsquo;17&mdash;&rsquo;19</div>
                 <div>Google, worked on VR tools (Daydream) and Jigsaw products.</div>
               </div>
               <div className="grid grid-cols-[80px_1fr] gap-6">
-                <div className="text-muted-foreground font-medium">'13—'17</div>
+                <div className="text-muted-foreground font-medium">&lsquo;13&mdash;&rsquo;17</div>
                 <div>Meta, led design for VR products and Facebook Stories.</div>
               </div>
               <div className="grid grid-cols-[80px_1fr] gap-6">
-                <div className="text-muted-foreground font-medium">'11—'13</div>
+                <div className="text-muted-foreground font-medium">&lsquo;11&mdash;&rsquo;13</div>
                 <div>Automatic, Founding Designer.</div>
               </div>
               <div className="grid grid-cols-[80px_1fr] gap-6">

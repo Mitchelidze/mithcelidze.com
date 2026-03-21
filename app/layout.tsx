@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Inter } from "next/font/google"
+import { Geist_Mono, Inter } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -23,7 +23,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={cn("antialiased", fontMono.variable, "font-sans", inter.variable)}
     >
-      <body>
+      <body suppressHydrationWarning>
         <ThemeProvider>{children}</ThemeProvider>
         <Toaster position="bottom-center" />
       </body>
