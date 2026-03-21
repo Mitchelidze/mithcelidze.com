@@ -26,7 +26,7 @@ export function AboutSection() {
         <div className="relative w-1/2">
           <Avatar className="w-32 h-32">
             <AvatarImage
-              src="https://i.ibb.co/fGNzsRMz/mirandaimage.jpg"
+              src="https://i.ibb.co/prxyvnb8/Profile-Miranda-Tchelidze-Photo.png"
               alt="Miranda"
               className="w-full h-full object-cover"
             />
