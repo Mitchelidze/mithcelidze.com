@@ -13,7 +13,7 @@ export function WorkSection() {
     <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-8 lg:gap-10 w-full">
       {/* Left Column */}
       <div className="md:col-span-4 lg:col-span-5 flex flex-col gap-6 pr-6 md:pr-8 lg:pr-10">
-        <h2 className="text-base font-medium text-white">
+        <h2 className="text-base font-medium text-foreground">
           Scan the highlighted work.
         </h2>
       </div>
