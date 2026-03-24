@@ -69,6 +69,9 @@ export function AboutSection() {
           <TabsContent value="Prose" className="mt-0">
             <div className="flex flex-col gap-4 md:gap-5">
               <p>
+                Own the design process end-to-end: from ambiguous early exploration through to polished, shipped experiences. Design intuitive iterfaces, create seamless expereinces and esablish design patterns that make advanced capabilities feel natural and accasible, iterating continusly  as the product and tehcnology evolve together.
+              </p>
+              <p>
                 Miranda began her career in product design in 2019 in agencies and media companies, building a foundation in storytelling, usability, and collaboration. As a founding designer at Automatic (&lsquo;11&mdash;&rsquo;13), she shaped strategy, product, and brand design for its award-winning smart driving assistant.
               </p>
               <p>

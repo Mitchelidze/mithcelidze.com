@@ -32,7 +32,12 @@ export function WorkSection() {
             {/* #1 AI Chat */}
             <CarouselItem className="pl-6 max-w-[580px] md:pl-8 basis-[80%] md:basis-[90%] lg:basis-[85%] xl:basis-[80%]">
               <div className="flex flex-col gap-6 bg-[#00ADEE] rounded-xl p-10 md:p-12 h-[600px]">
-                <p className="text-xl font-medium text-white">Led the design of the TBC bank’s first AI-driven chat experience for 5M+ users, creating a new touchpoint for engagement and automating routine support queries.</p>
+                <p className="text-xl font-medium text-white">Led the design of the TBC bank’s first AI-driven chat experience for 5M+ users, creating a new touchpoint for engagement and automating routine support queries. Owned the design process end-to-end, from ambiguous early exploration through to polished, shipped expereinces.</p>
+                <div className="flex mt-4 items-center text-white">
+                  <p className="text-md font-bold">Iterface for AI agents</p>
+                  <span aria-hidden="true">&nbsp;·&nbsp;</span>
+                  <p className="text-md font-bold">AI-powered Assistant</p>
+                </div>
                 <div className="flex mt-4">
                   <Image
                     src="/tbcappicon.svg"
