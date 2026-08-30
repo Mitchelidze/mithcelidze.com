@@ -42,6 +42,13 @@ Start the production server:
 npm run start
 ```
 
+### Production Deployment
+To publish changes to production on Vercel:
+1. Verify type safety: `npm run typecheck`
+2. Stage & commit changes: `git add . && git commit -m "<message>"`
+3. Push to production: `git push origin main` (or `npm run deploy`)
+*Note: Git uses SSH over Port 443 (`git@github.com:Mitchelidze/mithcelidze.com.git` with `IdentityFile ~/.ssh/id_ed25519`) configured in `~/.ssh/config` to bypass corporate network proxies.*
+
 ### Code Quality
 - **Linting:** `npm run lint`
 - **Formatting:** `npm run format`
