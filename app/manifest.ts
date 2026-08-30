@@ -7,8 +7,8 @@ export default function manifest(): MetadataRoute.Manifest {
     description: "Miranda Tchelidze Portfolio Website",
     start_url: "/",
     display: "standalone",
-    background_color: "#ffffff",
-    theme_color: "#000000",
+    background_color: "#f0f0f0",
+    theme_color: "#f0f0f0",
     icons: [
       {
         src: "/favicon.ico",
